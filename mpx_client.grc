@@ -668,6 +668,53 @@
     </param>
     <param>
       <key>_coordinate</key>
+      <value>(896, 540)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>key</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>HMAC key</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value>k</value>
+    </param>
+    <param>
+      <key>hide</key>
+      <value>none</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>string</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>kissa13</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
       <value>(296, 316)</value>
     </param>
     <param>
@@ -2437,11 +2484,11 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>hmac_key</key>
-      <value>'kissa'</value>
+      <value>key</value>
     </param>
     <param>
       <key>host</key>
-      <value>'localhost'</value>
+      <value>host</value>
     </param>
     <param>
       <key>id</key>
@@ -2453,7 +2500,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>port</key>
-      <value>51400</value>
+      <value>port</value>
     </param>
   </block>
   <connection>
