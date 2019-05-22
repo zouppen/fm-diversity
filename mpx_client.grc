@@ -445,6 +445,53 @@
     </param>
   </block>
   <block>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(304, 316)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>device</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>RTL device string</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value>D</value>
+    </param>
+    <param>
+      <key>hide</key>
+      <value>none</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>string</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>rtl=0</value>
+    </param>
+  </block>
+  <block>
     <key>fm_snr</key>
     <param>
       <key>alias</key>
@@ -715,7 +762,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(296, 316)</value>
+      <value>(304, 428)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2277,7 +2324,7 @@
     </param>
     <param>
       <key>args</key>
-      <value></value>
+      <value>device</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -2285,7 +2332,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 28)</value>
+      <value>(8, 20)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2438,18 +2485,19 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.sock.connect((host, port))
         self.little = sys.byteorder == 'little'
+        self.start_time = time.time()*1e6
 
     def work(self, input_items, output_items):
         """Wait until given number of items are ready, then send UDP packet with HMAC"""
         if len(input_items[0]) &lt; self.items_per_packet: return 0
 
-        # Header contains sample counter and µs timestamp
-        header = struct.pack('&gt;QQ', self.count, time.time()*1e6)
+        # Header contains startup time in µs and sample counter
+        header = struct.pack('&gt;QQ', self.start_time, self.count)
 
         # Payload is big-endian array of samples
-        arr = array('h', input_items[0][:self.items_per_packet])
+        arr = input_items[0][:self.items_per_packet]
         if self.little:
-            arr.byteswap()
+            arr = arr.byteswap()
         content = arr.tostring()
 
         # Packet ends with SHA256 HMAC
