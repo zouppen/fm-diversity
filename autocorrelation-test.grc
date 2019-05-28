@@ -234,6 +234,33 @@
     </param>
   </block>
   <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(888, 28)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>vector_len</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>2*samp_rate</value>
+    </param>
+  </block>
+  <block>
     <key>audio_sink</key>
     <param>
       <key>alias</key>
@@ -379,7 +406,7 @@
     </param>
     <param>
       <key>vlen</key>
-      <value>2*samp_rate</value>
+      <value>vector_len</value>
     </param>
   </block>
   <block>
@@ -422,7 +449,7 @@
     </param>
     <param>
       <key>vlen</key>
-      <value>2*samp_rate</value>
+      <value>vector_len</value>
     </param>
   </block>
   <block>
@@ -1136,7 +1163,109 @@
     </param>
     <param>
       <key>num_items</key>
-      <value>2*samp_rate</value>
+      <value>vector_len</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_stream_to_vector</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(504, 204)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_stream_to_vector_1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_items</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_stream_to_vector</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(496, 324)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_stream_to_vector_1_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_items</key>
+      <value>samp_rate</value>
     </param>
     <param>
       <key>vlen</key>
@@ -1242,7 +1371,7 @@
     </param>
     <param>
       <key>num_items</key>
-      <value>2*samp_rate</value>
+      <value>vector_len</value>
     </param>
     <param>
       <key>vlen</key>
@@ -1293,7 +1422,7 @@
     </param>
     <param>
       <key>num_items</key>
-      <value>2*samp_rate</value>
+      <value>vector_len</value>
     </param>
     <param>
       <key>vlen</key>
@@ -1344,7 +1473,7 @@
     </param>
     <param>
       <key>num_items</key>
-      <value>2*samp_rate</value>
+      <value>vector_len</value>
     </param>
     <param>
       <key>vlen</key>
@@ -1434,7 +1563,7 @@
     </param>
     <param>
       <key>fft_size</key>
-      <value>2*samp_rate</value>
+      <value>vector_len</value>
     </param>
     <param>
       <key>forward</key>
@@ -1474,7 +1603,7 @@
     </param>
     <param>
       <key>window</key>
-      <value>window.rectangular(2*samp_rate)</value>
+      <value>window.rectangular(vector_len)</value>
     </param>
   </block>
   <block>
@@ -1497,7 +1626,7 @@
     </param>
     <param>
       <key>fft_size</key>
-      <value>2*samp_rate</value>
+      <value>vector_len</value>
     </param>
     <param>
       <key>forward</key>
@@ -1537,7 +1666,7 @@
     </param>
     <param>
       <key>window</key>
-      <value>window.rectangular(2*samp_rate)</value>
+      <value>window.rectangular(vector_len)</value>
     </param>
   </block>
   <block>
@@ -1560,7 +1689,7 @@
     </param>
     <param>
       <key>fft_size</key>
-      <value>2*samp_rate</value>
+      <value>vector_len</value>
     </param>
     <param>
       <key>forward</key>
@@ -1600,7 +1729,7 @@
     </param>
     <param>
       <key>window</key>
-      <value>window.rectangular(2*samp_rate)</value>
+      <value>window.rectangular(vector_len)</value>
     </param>
   </block>
   <block>
@@ -1756,7 +1885,7 @@ def complement(x, high):
     </param>
     <param>
       <key>vector_length</key>
-      <value>2*samp_rate</value>
+      <value>vector_len</value>
     </param>
   </block>
   <block>
@@ -2628,11 +2757,11 @@ def complement(x, high):
     </param>
     <param>
       <key>size</key>
-      <value>2*samp_rate</value>
+      <value>vector_len</value>
     </param>
     <param>
       <key>srate</key>
-      <value>2*samp_rate</value>
+      <value>vector_len</value>
     </param>
     <param>
       <key>stemplot</key>
@@ -2821,11 +2950,11 @@ def complement(x, high):
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(488, 164)</value>
+      <value>(488, 132)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2864,11 +2993,11 @@ def complement(x, high):
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(488, 284)</value>
+      <value>(472, 268)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2959,6 +3088,12 @@ def complement(x, high):
   </connection>
   <connection>
     <source_block_id>blocks_delay_0</source_block_id>
+    <sink_block_id>blocks_stream_to_vector_1_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_delay_0</source_block_id>
     <sink_block_id>rational_resampler_xxx_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -2972,6 +3107,12 @@ def complement(x, high):
   <connection>
     <source_block_id>blocks_delay_0_0</source_block_id>
     <sink_block_id>blocks_add_xx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_delay_0_0</source_block_id>
+    <sink_block_id>blocks_stream_to_vector_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -3026,6 +3167,18 @@ def complement(x, high):
   <connection>
     <source_block_id>blocks_stream_to_vector_0</source_block_id>
     <sink_block_id>fft_vxx_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_stream_to_vector_1</source_block_id>
+    <sink_block_id>fft_vxx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_stream_to_vector_1_0</source_block_id>
+    <sink_block_id>fft_vxx_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
