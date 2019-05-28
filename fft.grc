@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>zeropad</value>
+      <value>fft_with_filter</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -82,113 +82,11 @@
     </param>
     <param>
       <key>title</key>
-      <value>Pads vector with zeros</value>
+      <value>Zero padding FFT</value>
     </param>
     <param>
       <key>placement</key>
       <value>(0,0)</value>
-    </param>
-  </block>
-  <block>
-    <key>analog_const_source_x</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>const</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(104, 220)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>analog_const_source_x_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_interleave</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>blocksize</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(488, 168)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_interleave_0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>num_streams</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>samp_rate</value>
     </param>
   </block>
   <block>
@@ -211,7 +109,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(288, 164)</value>
+      <value>(376, 180)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -235,7 +133,7 @@
     </param>
     <param>
       <key>num_items</key>
-      <value>samp_rate</value>
+      <value>2*samp_rate</value>
     </param>
     <param>
       <key>vlen</key>
@@ -243,7 +141,7 @@
     </param>
   </block>
   <block>
-    <key>blocks_stream_to_vector</key>
+    <key>blocks_vector_insert_x</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -262,7 +160,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(288, 220)</value>
+      <value>(168, 164)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -270,11 +168,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>blocks_stream_to_vector_0_0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
+      <value>blocks_vector_insert_x_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -285,16 +179,24 @@
       <value>0</value>
     </param>
     <param>
-      <key>num_items</key>
-      <value>samp_rate</value>
+      <key>offset</key>
+      <value>0</value>
     </param>
     <param>
-      <key>vlen</key>
-      <value>1</value>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>period</key>
+      <value>2*samp_rate</value>
+    </param>
+    <param>
+      <key>vector</key>
+      <value>np.zeros(samp_rate)</value>
     </param>
   </block>
   <block>
-    <key>blocks_stream_to_vector</key>
+    <key>blocks_vector_to_stream</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -309,11 +211,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(816, 180)</value>
+      <value>(992, 180)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -321,11 +223,11 @@
     </param>
     <param>
       <key>id</key>
-      <value>blocks_stream_to_vector_1</value>
+      <value>blocks_vector_to_stream_0</value>
     </param>
     <param>
       <key>type</key>
-      <value>float</value>
+      <value>complex</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -345,7 +247,134 @@
     </param>
   </block>
   <block>
-    <key>blocks_vector_to_stream</key>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value>Low pass filter (in units of blocksize)</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(328, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>cutoff</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>High pass cutoff</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>hide</key>
+      <value>none</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>intx</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>10</value>
+    </param>
+  </block>
+  <block>
+    <key>epy_block</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_io_cache</key>
+      <value>('High pass filter for FFT vector', 'blk', [('vector_length', '2'), ('cutoff', '0')], [('0', 'complex', 2)], [('0', 'complex', 2)], 'High pass filter for FFT output', ['cutoff', 'vector_length'])</value>
+    </param>
+    <param>
+      <key>_source_code</key>
+      <value>"""
+Embedded Python Blocks:
+
+Each time this file is saved, GRC will instantiate the first class it finds
+to get ports and parameters of your block. The arguments to __init__  will
+be the parameters. All of them are required to have default values!
+"""
+
+import numpy as np
+from gnuradio import gr
+from pprint import pprint
+
+class blk(gr.sync_block):  # other base classes are basic_block, decim_block, interp_block
+    """High pass filter for FFT output"""
+
+    def __init__(self, vector_length=2, cutoff=0):  # only default arguments here
+        """arguments to this function show up as parameters in GRC"""
+        self.vector_length = vector_length
+        self.cutoff = cutoff
+
+        gr.sync_block.__init__(
+            self,
+            name='High pass filter for FFT vector',   # will show up in GRC
+            in_sig  = [(np.complex64, vector_length)],
+            out_sig = [(np.complex64, vector_length)]
+        )
+
+    def work(self, input_items, output_items):
+        """Actually, just zero fill start and end of the vector"""
+        
+        output_items[0][:] = input_items[0]
+        
+        for i in range(1,self.cutoff):
+            output_items[0][0,i-1] = 0
+            output_items[0][0,-i] = 0
+
+        return len(output_items[0])
+</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>cutoff</key>
+      <value>cutoff</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(752, 172)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>fft_highpass</value>
+    </param>
+    <param>
+      <key>vector_length</key>
+      <value>2*samp_rate</value>
+    </param>
+  </block>
+  <block>
+    <key>fft_vxx</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -360,11 +389,19 @@
     </param>
     <param>
       <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>fft_size</key>
+      <value>2*samp_rate</value>
+    </param>
+    <param>
+      <key>forward</key>
       <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(648, 180)</value>
+      <value>(536, 156)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -372,7 +409,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>blocks_vector_to_stream_1</value>
+      <value>fft_vxx_0</value>
     </param>
     <param>
       <key>type</key>
@@ -387,12 +424,47 @@
       <value>0</value>
     </param>
     <param>
-      <key>num_items</key>
-      <value>samp_rate</value>
+      <key>nthreads</key>
+      <value>1</value>
     </param>
     <param>
-      <key>vlen</key>
-      <value>1</value>
+      <key>shift</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>window</key>
+      <value>window.rectangular(2*samp_rate)</value>
+    </param>
+  </block>
+  <block>
+    <key>import</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(560, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>import_0</value>
+    </param>
+    <param>
+      <key>import</key>
+      <value>import numpy as np</value>
     </param>
   </block>
   <block>
@@ -407,7 +479,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(984, 172)</value>
+      <value>(1144, 180)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -419,7 +491,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>float</value>
+      <value>complex</value>
     </param>
     <param>
       <key>label</key>
@@ -435,7 +507,7 @@
     </param>
     <param>
       <key>vlen</key>
-      <value>samp_rate*2</value>
+      <value>1</value>
     </param>
   </block>
   <block>
@@ -450,7 +522,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(104, 164)</value>
+      <value>(40, 180)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -497,7 +569,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(288, 28)</value>
+      <value>(208, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -529,44 +601,38 @@
     </param>
   </block>
   <connection>
-    <source_block_id>analog_const_source_x_0</source_block_id>
-    <sink_block_id>blocks_stream_to_vector_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_interleave_0</source_block_id>
-    <sink_block_id>blocks_vector_to_stream_1</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>blocks_stream_to_vector_0</source_block_id>
-    <sink_block_id>blocks_interleave_0</sink_block_id>
+    <sink_block_id>fft_vxx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_stream_to_vector_0_0</source_block_id>
-    <sink_block_id>blocks_interleave_0</sink_block_id>
+    <source_block_id>blocks_vector_insert_x_0</source_block_id>
+    <sink_block_id>blocks_stream_to_vector_0</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>1</sink_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_stream_to_vector_1</source_block_id>
+    <source_block_id>blocks_vector_to_stream_0</source_block_id>
     <sink_block_id>pad_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_vector_to_stream_1</source_block_id>
-    <sink_block_id>blocks_stream_to_vector_1</sink_block_id>
+    <source_block_id>fft_highpass</source_block_id>
+    <sink_block_id>blocks_vector_to_stream_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>fft_vxx_0</source_block_id>
+    <sink_block_id>fft_highpass</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>pad_source_0</source_block_id>
-    <sink_block_id>blocks_stream_to_vector_0</sink_block_id>
+    <sink_block_id>blocks_vector_insert_x_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
