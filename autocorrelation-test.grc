@@ -26,7 +26,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -97,7 +97,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -128,7 +128,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -180,7 +180,11 @@
     </param>
   </block>
   <block>
-    <key>variable</key>
+    <key>variable_function_probe</key>
+    <param>
+      <key>block_id</key>
+      <value>delay_probe</value>
+    </param>
     <param>
       <key>comment</key>
       <value></value>
@@ -190,8 +194,47 @@
       <value>True</value>
     </param>
     <param>
+      <key>function_args</key>
+      <value></value>
+    </param>
+    <param>
+      <key>function_name</key>
+      <value>level</value>
+    </param>
+    <param>
       <key>_coordinate</key>
-      <value>(920, 916)</value>
+      <value>(944, 436)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>detected_delay</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>poll_rate</key>
+      <value>10</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(696, 932)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -214,11 +257,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(920, 848)</value>
+      <value>(696, 860)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -241,7 +284,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -268,7 +311,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -311,7 +354,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(832, 380)</value>
+      <value>(384, 124)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -354,11 +397,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(432, 180)</value>
+      <value>(832, 228)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -409,7 +452,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(496, 392)</value>
+      <value>(536, 144)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -460,7 +503,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(760, 616)</value>
+      <value>(768, 728)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -511,7 +554,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(536, 532)</value>
+      <value>(48, 564)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -613,7 +656,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(264, 400)</value>
+      <value>(264, 256)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -668,7 +711,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(616, 244)</value>
+      <value>(1016, 276)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -719,11 +762,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(616, 180)</value>
+      <value>(1016, 228)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -732,6 +775,116 @@
     <param>
       <key>id</key>
       <value>blocks_delay_0_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_ports</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_delay</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>delay</key>
+      <value>max(0,-detected_delay)</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(984, 548)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_delay_0_0_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_ports</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_delay</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>delay</key>
+      <value>max(0,detected_delay)</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(984, 612)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_delay_0_1</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -841,7 +994,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(64, 396)</value>
+      <value>(192, 236)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -892,7 +1045,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(968, 184)</value>
+      <value>(384, 392)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -939,7 +1092,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(608, 404)</value>
+      <value>(664, 188)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1037,7 +1190,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(344, 440)</value>
+      <value>(344, 280)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1084,7 +1237,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(944, 688)</value>
+      <value>(952, 800)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1174,7 +1327,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(304, 404)</value>
+      <value>(264, 308)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1221,7 +1374,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(144, 532)</value>
+      <value>(560, 404)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1327,7 +1480,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(776, 532)</value>
+      <value>(240, 628)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1422,6 +1575,41 @@
     </param>
   </block>
   <block>
+    <key>blocks_probe_signal_x</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(432, 568)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>delay_probe</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>int</value>
+    </param>
+  </block>
+  <block>
     <key>fft_vxx</key>
     <param>
       <key>alias</key>
@@ -1449,7 +1637,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(312, 500)</value>
+      <value>(720, 372)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1500,11 +1688,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(760, 172)</value>
+      <value>(176, 380)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1547,11 +1735,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(760, 236)</value>
+      <value>(176, 444)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1672,7 +1860,7 @@
     </param>
     <param>
       <key>_io_cache</key>
-      <value>('Peak extractor', 'blk', [('vector_length', '2')], [('0', 'float', 2)], [('0', 'float', 1)], 'Embedded Python Block example - a simple multiply const', ['vector_length'])</value>
+      <value>('Peak extractor', 'blk', [('vector_length', '2')], [('0', 'float', 2)], [('0', 'int', 1)], 'Embedded Python Block example - a simple multiply const', ['vector_length'])</value>
     </param>
     <param>
       <key>_source_code</key>
@@ -1696,7 +1884,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
             self,
             name='Peak extractor',   # will show up in GRC
             in_sig=[(np.float32, vector_length)],
-            out_sig=[np.float32]
+            out_sig=[np.int32]
         )
         self.vector_length = vector_length
 
@@ -1719,7 +1907,7 @@ def complement(x, high):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(760, 452)</value>
+      <value>(240, 564)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1762,7 +1950,7 @@ def complement(x, high):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(944, 436)</value>
+      <value>(432, 484)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1782,7 +1970,7 @@ def complement(x, high):
     </param>
     <param>
       <key>type</key>
-      <value>float</value>
+      <value>int</value>
     </param>
     <param>
       <key>color1</key>
@@ -1993,7 +2181,7 @@ def complement(x, high):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(944, 596)</value>
+      <value>(952, 708)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -2331,7 +2519,7 @@ def complement(x, high):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(944, 516)</value>
+      <value>(432, 612)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -3030,14 +3218,14 @@ def complement(x, high):
     </param>
   </block>
   <block>
-    <key>qtgui_vector_sink_f</key>
+    <key>qtgui_time_sink_x</key>
     <param>
       <key>autoscale</key>
       <value>True</value>
     </param>
     <param>
-      <key>average</key>
-      <value>1.0</value>
+      <key>axislabels</key>
+      <value>False</value>
     </param>
     <param>
       <key>alias</key>
@@ -3048,16 +3236,24 @@ def complement(x, high):
       <value></value>
     </param>
     <param>
+      <key>ctrlpanel</key>
+      <value>True</value>
+    </param>
+    <param>
       <key>affinity</key>
       <value></value>
     </param>
     <param>
+      <key>entags</key>
+      <value>True</value>
+    </param>
+    <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(680, 4)</value>
+      <value>(1120, 548)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -3073,11 +3269,15 @@ def complement(x, high):
     </param>
     <param>
       <key>id</key>
-      <value>qtgui_vector_sink_f_0</value>
+      <value>qtgui_time_sink_x_1_1</value>
+    </param>
+    <param>
+      <key>legend</key>
+      <value>False</value>
     </param>
     <param>
       <key>alpha1</key>
-      <value>1.0</value>
+      <value>0.5</value>
     </param>
     <param>
       <key>color1</key>
@@ -3086,6 +3286,14 @@ def complement(x, high):
     <param>
       <key>label1</key>
       <value></value>
+    </param>
+    <param>
+      <key>marker1</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style1</key>
+      <value>1</value>
     </param>
     <param>
       <key>width1</key>
@@ -3097,11 +3305,19 @@ def complement(x, high):
     </param>
     <param>
       <key>color10</key>
-      <value>"dark blue"</value>
+      <value>"blue"</value>
     </param>
     <param>
       <key>label10</key>
       <value></value>
+    </param>
+    <param>
+      <key>marker10</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style10</key>
+      <value>1</value>
     </param>
     <param>
       <key>width10</key>
@@ -3109,7 +3325,7 @@ def complement(x, high):
     </param>
     <param>
       <key>alpha2</key>
-      <value>1.0</value>
+      <value>0.5</value>
     </param>
     <param>
       <key>color2</key>
@@ -3118,6 +3334,14 @@ def complement(x, high):
     <param>
       <key>label2</key>
       <value></value>
+    </param>
+    <param>
+      <key>marker2</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style2</key>
+      <value>1</value>
     </param>
     <param>
       <key>width2</key>
@@ -3136,6 +3360,14 @@ def complement(x, high):
       <value></value>
     </param>
     <param>
+      <key>marker3</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style3</key>
+      <value>1</value>
+    </param>
+    <param>
       <key>width3</key>
       <value>1</value>
     </param>
@@ -3150,6 +3382,14 @@ def complement(x, high):
     <param>
       <key>label4</key>
       <value></value>
+    </param>
+    <param>
+      <key>marker4</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style4</key>
+      <value>1</value>
     </param>
     <param>
       <key>width4</key>
@@ -3168,6 +3408,14 @@ def complement(x, high):
       <value></value>
     </param>
     <param>
+      <key>marker5</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style5</key>
+      <value>1</value>
+    </param>
+    <param>
       <key>width5</key>
       <value>1</value>
     </param>
@@ -3182,6 +3430,14 @@ def complement(x, high):
     <param>
       <key>label6</key>
       <value></value>
+    </param>
+    <param>
+      <key>marker6</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style6</key>
+      <value>1</value>
     </param>
     <param>
       <key>width6</key>
@@ -3200,6 +3456,14 @@ def complement(x, high):
       <value></value>
     </param>
     <param>
+      <key>marker7</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style7</key>
+      <value>1</value>
+    </param>
+    <param>
       <key>width7</key>
       <value>1</value>
     </param>
@@ -3214,6 +3478,14 @@ def complement(x, high):
     <param>
       <key>label8</key>
       <value></value>
+    </param>
+    <param>
+      <key>marker8</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style8</key>
+      <value>1</value>
     </param>
     <param>
       <key>width8</key>
@@ -3232,16 +3504,16 @@ def complement(x, high):
       <value></value>
     </param>
     <param>
-      <key>width9</key>
+      <key>marker9</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style9</key>
       <value>1</value>
     </param>
     <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
+      <key>width9</key>
+      <value>1</value>
     </param>
     <param>
       <key>name</key>
@@ -3249,55 +3521,67 @@ def complement(x, high):
     </param>
     <param>
       <key>nconnections</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
-      <key>ref_level</key>
+      <key>size</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>srate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>stemplot</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>tr_chan</key>
       <value>0</value>
     </param>
     <param>
-      <key>showports</key>
-      <value>True</value>
+      <key>tr_delay</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>tr_level</key>
+      <value>0.0</value>
+    </param>
+    <param>
+      <key>tr_mode</key>
+      <value>qtgui.TRIG_MODE_FREE</value>
+    </param>
+    <param>
+      <key>tr_slope</key>
+      <value>qtgui.TRIG_SLOPE_POS</value>
+    </param>
+    <param>
+      <key>tr_tag</key>
+      <value>""</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
     </param>
     <param>
       <key>update_time</key>
       <value>0.10</value>
     </param>
     <param>
-      <key>vlen</key>
-      <value>samp_rate*2</value>
+      <key>ylabel</key>
+      <value>Amplitude</value>
     </param>
     <param>
-      <key>x_axis_label</key>
-      <value>"x-Axis"</value>
-    </param>
-    <param>
-      <key>x_start</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>x_step</key>
-      <value>1.0</value>
-    </param>
-    <param>
-      <key>x_units</key>
+      <key>yunit</key>
       <value>""</value>
     </param>
     <param>
       <key>ymax</key>
-      <value>10</value>
+      <value>1e17</value>
     </param>
     <param>
       <key>ymin</key>
-      <value>-140</value>
-    </param>
-    <param>
-      <key>y_axis_label</key>
-      <value>"y-Axis"</value>
-    </param>
-    <param>
-      <key>y_units</key>
-      <value>""</value>
+      <value>-1</value>
     </param>
   </block>
   <block>
@@ -3387,7 +3671,7 @@ def complement(x, high):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(280, 644)</value>
+      <value>(88, 908)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3418,6 +3702,168 @@ def complement(x, high):
       <value>fff</value>
     </param>
   </block>
+  <block>
+    <key>virtual_sink</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1144, 228)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>sink_signal_a</value>
+    </param>
+    <param>
+      <key>stream_id</key>
+      <value>signal_a</value>
+    </param>
+  </block>
+  <block>
+    <key>virtual_sink</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1144, 276)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>sink_signal_b</value>
+    </param>
+    <param>
+      <key>stream_id</key>
+      <value>signal_b</value>
+    </param>
+  </block>
+  <block>
+    <key>virtual_source</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(8, 388)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>source_signal_a</value>
+    </param>
+    <param>
+      <key>stream_id</key>
+      <value>signal_a</value>
+    </param>
+  </block>
+  <block>
+    <key>virtual_source</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(808, 548)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>source_signal_a_0</value>
+    </param>
+    <param>
+      <key>stream_id</key>
+      <value>signal_a</value>
+    </param>
+  </block>
+  <block>
+    <key>virtual_source</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(8, 452)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>source_signal_b</value>
+    </param>
+    <param>
+      <key>stream_id</key>
+      <value>signal_b</value>
+    </param>
+  </block>
+  <block>
+    <key>virtual_source</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(808, 612)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>source_signal_b_0</value>
+    </param>
+    <param>
+      <key>stream_id</key>
+      <value>signal_b</value>
+    </param>
+  </block>
   <connection>
     <source_block_id>audio_source_0</source_block_id>
     <sink_block_id>blocks_delay_0</sink_block_id>
@@ -3445,12 +3891,6 @@ def complement(x, high):
   <connection>
     <source_block_id>blocks_argmax_xx_0</source_block_id>
     <sink_block_id>qtgui_number_sink_1</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_complex_to_mag_squared_0</source_block_id>
-    <sink_block_id>blocks_argmax_xx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -3492,33 +3932,27 @@ def complement(x, high):
   </connection>
   <connection>
     <source_block_id>blocks_delay_0</source_block_id>
-    <sink_block_id>blocks_add_xx_0</sink_block_id>
+    <sink_block_id>sink_signal_b</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_delay_0_0</source_block_id>
+    <sink_block_id>sink_signal_a</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_delay_0_0_0</source_block_id>
+    <sink_block_id>qtgui_time_sink_x_1_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_delay_0_1</source_block_id>
+    <sink_block_id>qtgui_time_sink_x_1_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>1</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_delay_0</source_block_id>
-    <sink_block_id>fft_with_filter_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_delay_0</source_block_id>
-    <sink_block_id>rational_resampler_xxx_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_delay_0_0</source_block_id>
-    <sink_block_id>blocks_add_xx_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_delay_0_0</source_block_id>
-    <sink_block_id>fft_with_filter_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_file_source_0</source_block_id>
@@ -3535,24 +3969,6 @@ def complement(x, high):
   <connection>
     <source_block_id>blocks_multiply_conjugate_cc_0</source_block_id>
     <sink_block_id>blocks_stream_to_vector_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_multiply_const_vxx_0</source_block_id>
-    <sink_block_id>audio_sink_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_short_to_float_0</source_block_id>
-    <sink_block_id>blocks_delay_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_short_to_float_0</source_block_id>
-    <sink_block_id>blocks_delay_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -3618,19 +4034,43 @@ def complement(x, high):
   </connection>
   <connection>
     <source_block_id>peak_extractor</source_block_id>
-    <sink_block_id>qtgui_number_sink_0</sink_block_id>
+    <sink_block_id>delay_probe</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>rational_resampler_xxx_0</source_block_id>
-    <sink_block_id>audio_sink_0</sink_block_id>
+    <source_block_id>peak_extractor</source_block_id>
+    <sink_block_id>qtgui_number_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>rational_resampler_xxx_0_0</source_block_id>
     <sink_block_id>fm</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>source_signal_a</source_block_id>
+    <sink_block_id>fft_with_filter_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>source_signal_a_0</source_block_id>
+    <sink_block_id>blocks_delay_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>source_signal_b</source_block_id>
+    <sink_block_id>fft_with_filter_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>source_signal_b_0</source_block_id>
+    <sink_block_id>blocks_delay_0_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
